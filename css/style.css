@@ -1,0 +1,32 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+html,body {height:100%;overflow:hidden;}
+html {background-color:#1d1d1d;}
+body {display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image: -webkit-radial-gradient(center top, circle farthest-corner, #FFFFFF 0%, #D8DFE9 100%);
+background-image: radial-gradient(circle farthest-corner at center top, #FFFFFF 0%, #D8DFE9 100%);
+overflow: hidden;}
+#wrapper {-webkit-perspective:960px;position: relative;height:100%;}
+
+.btn {position:relative;height:50px;width:200px;border-radius:5px;box-shadow:0 2px 2px rgba(0, 0, 0, 0.4) inset;transition-duration: .6s;}
+.btn-blue {background-color:#DDD;}
+
+.btn .cover {position:absolute;top:0;bottom:0;left:0;right:0;border-radius:5px;background-image:-webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);transform-origin: center bottom;transform-style: preserve-3d;transition-duration: .6s;}
+
+.innie, .spine, .outie {position:absolute;width:100%;border-radius:5px;}
+.btn .cover .innie {background-color:#ff0;height:100%;background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);}
+.btn .cover .spine {top: .25rem;
+  background: #bb0;
+  height: .25rem;
+  transform: rotateX(90deg);
+  transform-origin: center top;}
+.btn .cover .outie {transform: translateZ(.25rem);background-color:#ff0;height:100%;background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);}
+.btn:hover .cover {transition-timing-function: cubic-bezier(.2,.7,.1,1.1);transform: rotateX(-120deg);}
+
+.p1 {background-color:rgba(255, 0, 255, 1);background:url(http://eput.com/upload/photos/2014/1118/thumb/10cf6af03a337bf2159585e19a16b490.jpg);color:#fff}
+.p2 {background-color:rgba(0, 0, 255, 1);background:url(http://eput.com/upload/photos/2014/1119/sumb/b7a7f673589f7f2a38e8d29c96a56f9f.jpg);border:3px solid #ff0;color:#fff}
+.p3 {background-color:rgba(0, 255, 0, 1);color:#fff;background:url(http://eput.com/upload/photos/2014/1112/thumb/39fc84937c85bb9b9efa67a2b4040ee1.jpg);}
+.p4 {background-color:rgba(250, 240, 250, 1);color:#fff;background:url(http://eput.com/upload/photos/2014/1115/sumb/978fe164df65ef4bb1a64364f7cca16f.jpg);}
+.p5 {background-color:#bbb;color:#fff;background:url(http://eput.com/upload/photos/2014/1112/thumb/875d2dc38d8652f7acbba8d96adbfe08.jpg);}
